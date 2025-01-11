@@ -1,0 +1,40 @@
+DOM == DOCUMENT OBEJECT MODEL
+
+WINDOW -> location | documnet | history
+
+DOCUMENT -> html
+
+HTML -> head | body
+
+HEAD -> meta | lite
+BODY -> h1 | p | div
+
+p -> strong
+
+* WINDOW > DOCUMENT > HTML > BODY > P > STRONG
+
+
+
+SELECIONAR
+
+MARCA -> getElementsByTagName() *seleciona pelo nome da tag (div, p, h1)
+ID -> getElementsById() *renomei uma tag (<div id = "*declare um nome">) e assim selecione atraves do nome da tag 
+NOME -> getElementsByName() *renomei uma tag (<div name = "*declare um nome">) e assim selecione atraves do nome da tag 
+CLASSE -> getElementsByClassName() *renomei uma tag (<div class = "*declare um nome">) e assim selecione atraves do nome da tag 
+
+SELETOR -> querySelector() ou querySelectorAll()
+
+querySelector('div#*nome_da_id*') ou 
+querySelector('div.*nome_da_class*')
+
+id = #
+class = .
+
+Para selecionar um paragrafo especifico ordene a linha dele [*numero_da_linha]
+
+exemplo: var p1 = window.document.getElementsByName('p')[0]
+
+
+p1.innerText = '*texto'  // altera o txt via js
+
+

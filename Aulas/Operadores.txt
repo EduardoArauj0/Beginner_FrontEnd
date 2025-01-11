@@ -1,0 +1,79 @@
+*ARITIMETICO*
+
++ // SOMA
+- // SUBTRAÇÃO
+* // MULTIPLICAÇÃO
+% // RESTO DA DIVISÃO
+/ // DIVISÃO
+** // ELEVADO
+
+*n é so um exemplo para a variavel numerica
+
+n +=  // SIMPLIFICAÇÃO n = n + ?
+n -=  // SIMPLIFICAÇÃO n = n - ?
+n *=  // SIMPLIFICAÇÃO n = n * ?
+n %=  // SIMPLIFICAÇÃO n = n % ?  
+n /=  // SIMPLIFICAÇÃO n = n / ?
+n **=  // SIMPLIFICAÇÃO n = n ** ?
+
+
+INCREMENTAÇÃO
+
+n++ // ADICIONA +1 A variavel
+n-- // SUBTRAI -1 DA variavel
+
+
+*RELACIONAL*
+
+RESULTADO VAI SER (TRUE ou FALSE)
+
+>  // MAIOR
+<  // MENOR
+>=  // IGUAL ou MAIOR
+<=  // IGUAL ou MENOR
+== // IGUAL
+!= // DIFERENTE
+
+IDENTIDADE
+
+// JAVASCRIPT NÃO TESTA TIPO DA variavel, SO O VALOR
+5 == 5 -> TRUE
+5 == '5' -> TRUE
+
+PARA TESTAR O TIPO 
+5 === '5' -> FALSE
+
+
+
+LOGICOS
+
+! -> NEGAÇÃO (não) - !TRUE ou !FALSE
+
+&& -> CONJUNÇÃO (e) - 
+!TRUE e !TRUE - !TRUE
+!TRUE e !FALSE - !FALSE
+!FALSE e !TRUE - !FALSE
+!FALSE e !FALSE - !FALSE
+
+
+|| -> DISJUNÇÃO (ou) -
+!TRUE e !TRUE - !TRUE
+!TRUE e !FALSE - !TRUE
+!FALSE e !TRUE - !TRUE
+!FALSE e !FALSE - !FALSE
+
+TERNARIO
+
+CALCULO ? TRUE : FALSE  // IRA CALCULAR E O RESULTADO VAI SER O QUE ESTIVER NO VERDADEIRO OU NO FALSO
+
+
+ORDEM DE PRECEDENCIA
+ |
+ | () ** / ...
+ |
+ | > < >= ...
+ |
+ | !
+ | &&
+ | ||
+ V

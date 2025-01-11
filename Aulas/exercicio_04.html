@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+    <style>
+        body {
+            background-color: cadetblue;
+            color: white;
+            font: normal 20pt Arial;
+        }
+        h1 {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formatação de String</h1>
+    <p>length, toUpperCase, toLowerCase</p>
+    <script>
+        var nome = window.prompt('Qual é o seu nome?')
+        document.write(`Olá ${nome}, seu nome tem ${nome.length} letras.<br/>`) // length conta a quantidade de letras
+        document.write(`Seu nome em maiúsculas é ${nome.toUpperCase()}.<br/>`) // toUpperCase() Transforma a String em MAISCÙLA
+        document.write(`Seu nome em minúsculas é ${nome.toLowerCase()}.<br/>`) // toLowerCase() Transforma a String em MINUSCULA
+        // .<br/> é par quebra as linhas
+    </script>
+</body>
+</html>

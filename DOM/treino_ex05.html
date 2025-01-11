@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treino de Soma</title>
+    <style>
+        body{
+            font: normal 20pt Arial;
+
+        }
+        input{
+            font: normal 15pt Arial;
+            color: blueviolet;
+        }
+        h1{
+            color: gold;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>Somar Valores</h1>
+    <input type="number" name="number1" id="number1"> +
+    <input type="number" name="number2" id="number2"> =
+    <div id="resultado"></div>
+    <input type="button" value="SOMAR" onclick = "somar()">
+    <script>
+        function somar() {
+
+        var v1 = document.querySelector('input#number1')
+        var v2 = document.querySelector('input#number2')
+        var resul = document.querySelector('div#resultado')
+        var num1 = Number(v1.value)
+        var num2 = Number(v2.value)
+        var soma = num1 + num2
+        resul.innerHTML = soma   
+
+        }
+
+
+    </script>
+</body>
+</html>

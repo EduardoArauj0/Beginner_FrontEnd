@@ -1,0 +1,10 @@
+'O aluno ' + nome + ' tirou a nota ' + nota   \\Contatenação
+`O aluno ${nome} tirou a nota ${nota}` \\Contatenação Atualizada *Lembrar de colocar ``
+
+
+
+var s = 'JavaScript' \\ s é a variavel 
+
+s.length         // quantos caracteres a string tem
+s.toUpperCase()  // tudo para 'MAIÚSCULAS'
+s.toLowerCase()  // tudo para 'minúsculas"

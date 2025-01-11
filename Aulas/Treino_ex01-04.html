@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trieno da aula 01 à 04</title>
+    <style>
+        body{
+            background-color: brown;
+            color: white;
+            font: normal 15pt Arial;
+        }
+        h1{
+            color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Treino</h1>
+    <p>Treinamento do que foi ensinado nos exceicios 01 à 04</p>
+    <script>
+        var nome1 = window.prompt('Qual o seu nome?')
+        var idade1 = Number(window.prompt('Qual a sua idade?'))
+        var salario1 = Number(window.prompt('Qunto é o seu salario?'))
+        var nome2 = window.prompt('Qual o seu nome?')
+        var idade2 = Number(window.prompt('Qual a sua idade?'))
+        var salario2 = Number(window.prompt('Quanto é o seu salario?'))
+        var soma = idade1 + idade2
+        var soma_salario = salario1 + salario2        
+        document.write(`Seu nome é ${nome1.toUpperCase()}, você tem ${idade1} anos e ganha ${salario1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}.<br/>`)
+        document.write(`Seu nome é ${nome2.toUpperCase()} e você tem ${idade2} anos e ganha ${salario2.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}.<br/>`)  
+        document.write(`A soma da idade de vocês é ${soma} anos.<br/>`)
+        document.write(`A soma do salario de vocês é ${soma_salario.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}.<br/>`)
+    </script>
+    
+</body>
+</html>

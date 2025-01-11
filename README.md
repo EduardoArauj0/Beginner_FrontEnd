@@ -1,3 +1,3 @@
-# Olá, Mundo!
+# Beginner - JS + HTML + CSS
 
-Teste de repositorio versionado
+Primeiras funções e testes em JavaScript no FrontEnd

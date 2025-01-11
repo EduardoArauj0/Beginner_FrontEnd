@@ -1,0 +1,15 @@
+var n1 = Number(window.prompt('Digite outro número')) // Number converte para Inteiro ou Decimal
+
+
+
+var n1 = 154.5
+
+n1.toFixed(2) = 154.50  //Adiciona uma segunda casa decimal
+
+n1.toFixed(2).replace('.', ',') = 154,50 // Transforma . em , *replace altera um item pelo outro
+
+n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) = R$ 154,50 // Transforma o VALOR na moeda Real
+
+n1.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'}) = US$ 154,50 // Transforma o VALOR na moeda Dolar
+
+n1.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'}) = € 154,50 // Transforma o VALOR na moeda Euro

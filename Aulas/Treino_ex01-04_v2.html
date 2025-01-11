@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste versão 2.0</title>
+    <style>
+        body{
+            background-color: bisque;
+            color: black;
+            font: normal 15pt Arial;
+        }
+        h1{
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculo medias</h1>
+    <script>
+        var nome = window.prompt('Informe seu nome')
+        var n1 = Number(window.prompt('Informe a primeira nota'))
+        var n2 = Number(window.prompt('Informe a segunda nota'))
+        var n3 = Number(window.prompt('Informe a terceira nota'))
+        var media = (n1 + n2 + n3)/3 
+        document.write(`Olá ${nome}, sua média foi ${media}, você está ${media >= 7.0 ? 'APROVADO' : 'REPROVADO'}`)
+        </script>
+</body>
+</html>

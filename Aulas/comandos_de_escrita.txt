@@ -1,0 +1,5 @@
+ document.write // escreve no paragrafo
+
+ window.prompt // recebe as informaçõs do usuario
+ window.alert // pop-up com a informção desejada
+ 
