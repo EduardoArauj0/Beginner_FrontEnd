@@ -3,7 +3,6 @@
 let db = [
   { texto: "Estudar JS", status: "" },
   { texto: "Netflix", status: "checked" },
-  
 ];
 
 const criarItem = (texto, status = "") => {
@@ -18,8 +17,27 @@ const criarItem = (texto, status = "") => {
   document.getElementById("TodoList").appendChild(item);
 };
 
-const atualizarTela = () => {
-  db.forEach(item => criarItem (item.texto, item.status));
+const limparTexto = () => {
+  const TodoList = document.getElementById("TodoList");
+  while (TodoList.firstChild) {
+    TodoList.removeChild(TodoList.lastChild);
+  }
 };
+
+const atualizarTela = () => {
+  limparTexto();
+  db.forEach((item) => criarItem(item.texto, item.status));
+};
+
+const inserirItem = (evento) => {
+  const tecla = evento.key;
+  const text = evento.target.value;
+  if (tecla === "Enter") {
+    db.push({ texto: text, status: "" });
+    atualizarTela();
+  }
+};
+
+document.getElementById("newItem").addEventListener("Keypress", inserirItem);
 
 atualizarTela();
