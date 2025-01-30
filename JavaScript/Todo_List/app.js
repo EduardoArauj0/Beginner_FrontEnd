@@ -5,11 +5,11 @@ let db = [
   { texto: "Netflix", status: "checked" },
 ];
 
-const criarItem = (texto, status = "") => {
+const criarItem = (texto, status, indice) => {
   const item = document.createElement("label");
   item.classList.add("todo__item");
   item.innerHTML = ` 
-<input type="checkbox" ${status}>
+<input type="checkbox" ${status} data-indice = ${indice}>
 <div>${texto}</div>
 <input type="button" value="X"> 
 `;
@@ -26,7 +26,7 @@ const limparTexto = () => {
 
 const atualizarTela = () => {
   limparTexto();
-  db.forEach((item) => criarItem(item.texto, item.status));
+  db.forEach((item, indice) => criarItem(item.texto, item.status, indice));
 };
 
 const inserirItem = (evento) => {
@@ -35,9 +35,16 @@ const inserirItem = (evento) => {
   if (tecla === "Enter") {
     db.push({ texto: text, status: "" });
     atualizarTela();
+    evento.target.value = "";
   }
 };
 
+const clickItem = (evento) => {
+  const elemento = evento.target;
+  console.log(elemento);
+};
+
 document.getElementById("newItem").addEventListener("Keypress", inserirItem);
+document.getElementById("todoList").addEventListener("click", clickItem);
 
 atualizarTela();
