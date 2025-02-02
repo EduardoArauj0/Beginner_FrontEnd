@@ -1,9 +1,7 @@
 "use strict";
 
-let db = [
-  { texto: "Estudar JS", status: "" },
-  { texto: "Netflix", status: "checked" },
-];
+const getDb = () => JSON.parse(localStorage.getItem("todoList")) ?? [];
+const setDb = (db) => localStorage.setItem("todoList", JSON.stringify(db));
 
 const criarItem = (texto, status, indice) => {
   const item = document.createElement("label");
@@ -26,6 +24,7 @@ const limparTexto = () => {
 
 const atualizarTela = () => {
   limparTexto();
+  const db = getDb();
   db.forEach((item, indice) => criarItem(item.texto, item.status, indice));
 };
 
@@ -33,19 +32,25 @@ const inserirItem = (evento) => {
   const tecla = evento.key;
   const text = evento.target.value;
   if (tecla === "Enter") {
+    const db = getDb();
     db.push({ texto: text, status: "" });
+    setDb(db);
     atualizarTela();
     evento.target.value = "";
   }
 };
 
 const removerItem = (indice) => {
+  const db = getDb();
   db.splice(indice, 1);
+  setDb(db);
   atualizarTela();
 };
 
 const atualizarItem = (indice) => {
+  const db = getDb(db);
   db[indice].status = db[indice].status === "" ? "checked" : "";
+  setDb(db);
   atualizarTela();
 };
 
