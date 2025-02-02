@@ -38,16 +38,26 @@ const inserirItem = (evento) => {
     evento.target.value = "";
   }
 };
+
 const removerItem = (indice) => {
   db.splice(indice, 1);
   atualizarTela();
 };
 
+const atualizarItem = (indice) => {
+  db[indice].status = db[indice].status === "" ? "checked" : "";
+  atualizarTela();
+};
+
 const clickItem = (evento) => {
   const elemento = evento.target;
-  if (elemento.type === "button");
-  const indice = elemento.dataset.indice;
-  removerItem(index);
+  if (elemento.type === "button") {
+    const indice = elemento.dataset.indice;
+    removerItem(index);
+  } else if (elemento.type === "checkbox") {
+    const indice = elemento.dataset.indice;
+    atualizarItem(indice);
+  }
 };
 
 document.getElementById("newItem").addEventListener("Keypress", inserirItem);
