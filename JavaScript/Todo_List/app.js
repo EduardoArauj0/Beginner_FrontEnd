@@ -38,10 +38,16 @@ const inserirItem = (evento) => {
     evento.target.value = "";
   }
 };
+const removerItem = (indice) => {
+  db.splice(indice, 1);
+  atualizarTela();
+};
 
 const clickItem = (evento) => {
   const elemento = evento.target;
-  console.log(elemento);
+  if (elemento.type === "button");
+  const indice = elemento.dataset.indice;
+  removerItem(index);
 };
 
 document.getElementById("newItem").addEventListener("Keypress", inserirItem);
